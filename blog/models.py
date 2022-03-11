@@ -7,6 +7,7 @@ STATUS = ((0, 'Draft'), (1, 'Publish'))
 class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
+    preview_content = models.CharField(max_length=300)
     date_created = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(to=User, on_delete=models.CASCADE)
