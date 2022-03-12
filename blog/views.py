@@ -12,3 +12,6 @@ class AboutView(generic.TemplateView):
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-date_created')
     template_name = 'index.html'
+
+class PortfolioView(generic.TemplateView):
+    template_name = 'portfolio.html'
